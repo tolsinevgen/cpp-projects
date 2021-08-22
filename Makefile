@@ -1,4 +1,4 @@
-SOURCES=program.cpp program2.cpp
+SOURCES=$(wildcard *.cpp)
 PROGRAMS=$(SOURCES:.cpp=)
 
 all: $(PROGRAMS)
