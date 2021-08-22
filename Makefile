@@ -1,15 +1,7 @@
-PROGRAM=program
+SOURCES=program.cpp program2.cpp
+PROGRAMS=$(SOURCES:.cpp=)
 
-SOURCE=$(PROGRAM).cpp
-OBJECTS=$(SOURCE:.cpp=.o)
-
-all: $(PROGRAM)
-
-%.o: %.cpp
-	gcc -c $< -o $@
-
-$(PROGRAM): $(OBJECTS)
-	g++ -o $@ $^
+all: $(PROGRAMS)
 
 clean:
-	rm -f $(PROGRAM) $(OBJECTS)
+	rm -f $(PROGRAMS)
